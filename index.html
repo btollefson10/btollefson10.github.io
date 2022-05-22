@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body class="padding-custom" data-spy="scroll" data-target="scroller">
+    <div class="fixed-top navbar-custom">
+      <div class="container">
+        <header
+          class="d-flex flex-wrap justify-content-center py-3 border-bottom"
+        >
+
+          <nav id="scroller">
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a href="#NoExp" class="nav-link" aria-current="page"
+                  >No Experience</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="#Developer" class="nav-link">Become a Developer</a>
+              </li>
+              <li class="nav-item">
+                <a href="#Benefits" class="nav-link">Benefits</a>
+              </li>
+              <li class="nav-item">
+                <a href="#Employers" class="nav-link">Employers are Looking</a>
+              </li>
+              <li class="nav-item">
+                <a href="#Careers" class="nav-link">Changing Careers</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="devquesitons"></div>
+
+    <script src="https://wise-narwhal-anbdv-dev-ed.my.salesforce.com/lightning/lightning.out.js"></script>
+    <script>
+      $Lightning.use(
+        'c:devquestions', // name of the Lightning app
+        function () {
+          // Callback once framework and app loaded
+          $Lightning.createComponent(
+            'c:developerQuestions', // top-level component of your app
+            {}, // attributes to set on the component when created
+            'devquesitons', // the DOM location to insert the component
+            function (cmp) {
+              // callback when component is created and active on the page
+            }
+          );
+        },
+        'https://simplemoments-developer-edition.na156.force.com/lightningout' // Site endpoint
+      );
+    </script>
+  </body>
+</html>
